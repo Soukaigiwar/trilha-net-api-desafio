@@ -70,8 +70,6 @@ namespace TrilhaApiDesafio.Controllers
         [HttpPost]
         public IActionResult Criar(Tarefa tarefa)
         {
-            String status = tarefa.Status.ToString();
-
             if (tarefa.Data == DateTime.MinValue)
                 return BadRequest(new { Erro = "A data da tarefa não pode ser vazia" });
 
